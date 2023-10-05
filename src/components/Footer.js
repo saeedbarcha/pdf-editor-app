@@ -18,8 +18,8 @@ function Footer({ onDrop, elements }) {
 
   return (
     <>
-      <div className="mt-2 mb-2">
-        <ResizableBox width={"800"} height={130}>
+        <div className="mt-2 mb-2 " style={{display:"flex", alignContent:"center", justifyContent:"center"}}>
+      <ResizableBox width={"800"} height={130}>
           <div
             ref={dropRef}
             style={{
@@ -31,7 +31,6 @@ function Footer({ onDrop, elements }) {
               width: "100%",
               backgroundColor: "rgb(233, 233, 233)",
               padding: "20px",
-              margin: "10px",
             }}
           >
             {"Footer"}

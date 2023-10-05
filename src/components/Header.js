@@ -38,7 +38,7 @@ function Header({ onDrop, elements }) {
   };
 
   return (
-    <div className="mt-2 mb-2">
+    <div className="mt-2 mb-2 " style={{display:"flex", alignContent:"center", justifyContent:"center"}}>
       <ResizableBox width={"800"} height={130}>
         <div
           ref={dropRef}
@@ -51,7 +51,7 @@ function Header({ onDrop, elements }) {
             width: "100%",
             backgroundColor: "rgb(233, 233, 233)",
             padding: "20px",
-            margin: "10px",
+            // margin: "10px",
           }}
         >
           {"Header"}
