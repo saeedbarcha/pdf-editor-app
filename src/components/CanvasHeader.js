@@ -3,7 +3,7 @@ import { useDrop } from "react-dnd";
 import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
 
-function Header({ onDrop, elements }) {
+function CanvasHeader({ onDrop, elements }) {
   const [photo, setPhoto] = useState(null);
   const [{ isOver }, dropRef] = useDrop({
     accept: "ELEMENT",
@@ -107,4 +107,4 @@ function Header({ onDrop, elements }) {
   );
 }
 
-export default Header;
+export default CanvasHeader;
