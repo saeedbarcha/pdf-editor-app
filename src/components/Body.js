@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import { useDrop } from "react-dnd";
 import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css"; // Don't forget to import the styles
@@ -10,8 +10,8 @@ function Body({ onDrop, elements }) {
     drop: (item) => {
       if (item.elementType === "img") {
         inputRef.current.click();
-      }else{
-        onDrop(item)
+      } else {
+        onDrop(item);
       }
     },
     collect: (monitor) => ({
@@ -19,6 +19,7 @@ function Body({ onDrop, elements }) {
     }),
   });
   const inputRef = useRef(null);
+
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -81,15 +82,29 @@ function Body({ onDrop, elements }) {
                     <h1 key={index}>{element.content}</h1>
                   ) : element.name === "Paragraph" ? (
                     <p key={index}>{element.content}</p>
-                  ) : <h3 key={index}>{element.content}</h3>
+                  ) :element.name === "table" ? (
+                    <p key={index}>{element.content}</p>
+                  ) : (
+                    <div key={index}>
+                      <ResizableBox
+                        width={80}
+                        height={80}
+                        minConstraints={[80, 80]}
+                        maxConstraints={[600, 400]}
+                      >
+                        {element.content}
+                      </ResizableBox>
+                    </div>
+                  ) 
                 )}
-                  <input
+               <input
                 type="file"
                 name="photo"
                 accept="image/*"
                 onChange={handleImageUpload}
                 hidden
                 ref={inputRef}
+                style={{ width: "50px", height: "50px" }}
               />
               </div>
             </div>

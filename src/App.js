@@ -42,7 +42,7 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <MainHeader />
       <div style={{ display: "flex", minHeight: "100vh",  width:"100%",  alignContent:"center", justifyContent:'center'}}>
-        <div id="canvasArea" style={{width:"80%", display:"flex", flexDirection:"column", alignContent:"center", justifyContent:'center'}} className="mt-2 mb-2">
+        <div id="canvasArea" style={{width:"100%", display:"flex", flexDirection:"column", alignContent:"center", justifyContent:'center'}} className="mt-2 mb-2">
           <Header onDrop={onDropHeader} elements={elementsHeader} />
           <Body onDrop={onDropBody} elements={elementsBody} />
           <Footer onDrop={onDropFooter} elements={elementsFooter} />

@@ -243,13 +243,6 @@ function Sidebar() {
       <div className="d-flex">
         <SidebarItem name="Heading" icon={headingIcon} />
         <SidebarItem name="Paragraph" icon={paraIcon} />
-        {/* <SidebarItem name="h2 Heading" /> */}
-        {/* <SidebarItem name="h3 Heading" />
-      <SidebarItem name="h4 Heading" />
-      <SidebarItem name="h5 Heading" />
-      <SidebarItem name="h5 Heading" />
-      <SidebarItem name="h6 Heading" /> */}
-        {/* <SidebarItem name="p" icon={imageIcon} /> */}
         <SidebarItem name="img" icon={imageIcon} />
       </div>
       <div className="d-flex">
